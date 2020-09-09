@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{50ADBCDC-DDC0-43A2-B11D-1C3D21187B94}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Alumnos/Index.cshtml">
+    <Files>
+      <File FileName="Controllers/AlumnosController.cs" Line="62" Column="35" />
+      <File FileName="Views/Alumnos/Index.cshtml" Line="64" Column="13" />
+      <File FileName="Program.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProyClase3" expanded="True">
+            <Node name="ProyClase3" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Alumnos" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ProyClase3 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Controllers/AlumnosController.cs" relfile="Controllers/AlumnosController.cs" line="65" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,77 @@
+﻿@*
+@model List<Alumno>
+*@
+@model X.PagedList.PagedList<Alumno>
+
+@using X.PagedList.Mvc;
+@using X.PagedList.Mvc.Core;
+@{
+    ViewData["Title"] = "Home Page";
+    var @mensaje= ViewBag.MensajeBienvenida;
+}
+@functions{
+string MostrarBanderaPais(string pais)
+{
+    <img src='@Url.Content("~/imagenes/"+ @pais.ToLower() + "-bandera-200px.jpg")' class="rounded-circle"  style="width: 40px; height: 40px;" /> 
+    return string.Empty;
+}
+} 
+
+<div class="text-center">
+    <h1 class="display-4">Lista de alumnos</h1>
+    <h3>@mensaje   </h3>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Buscar por nombre o apellido: @Html.TextBox("campobusqueda")  
+            <input type="submit" value="Buscar" class="btn btn-primary" />
+        </p>
+    }
+
+    @Html.ActionLink("Crear alumno","Crear")  |   
+    @Html.ActionLink("Order : Asc - Desc","Order")
+    
+    <table class="table">
+     <tr>
+         <th></th>
+         <th>Legajo</th>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>D.N.I</th>
+         <th>Pais</th>
+         <th>Sexo</th>
+         <th></th>
+     </tr>
+
+     @foreach (var alumno in Model)
+     {
+         <tr>
+             <td><img src='@Url.Content("~/imagenes/"+ @alumno.Legajo + ".jpg")' class="rounded-circle"  style="width: 75px; height: 75px;" />  </td>
+             <td>@alumno.Legajo</td>
+             <td>@alumno.Nombre</td>
+             <td>@alumno.Apellido</td>
+             <td>@alumno.Dni</td>
+             <td>@MostrarBanderaPais(@alumno.PaisNombre)</td>
+             <td>@alumno.Sexo</td>
+             <td>
+                 @Html.ActionLink("Ver","Detalle",new {leg=alumno.Legajo})  |
+                 @Html.ActionLink("Editar alumno","Editar",new {leg=alumno.Legajo})
+             </td>
+         </tr>
+     }
+
+
+    </table>
+Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+
+@Html.PagedListPager(Model, pagina => Url.Action("Index",
+    new { pagina, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }),
+    new X.PagedList.Mvc.Core.Common.PagedListRenderOptions {
+        
+        ContainerDivClasses=new [] {"navigation"},
+        PageClasses=new[] {"page-link"},
+        LiElementClasses = Enumerable.Empty<string>(),
+       
+    })
+
+</div>

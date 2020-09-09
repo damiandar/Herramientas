@@ -1,0 +1,40 @@
+﻿@model List<Alumno>
+@{
+    ViewData["Title"] = "Home Page";
+    var @mensaje= ViewBag.MensajeBienvenida;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de alumnos</h1>
+    <h1>@mensaje</h1>
+             
+    @Html.ActionLink("Crear alumno","Crear")  |    
+    @Html.ActionLink("Order : Asc - Desc","Order")
+    
+    <table class="table">
+     <tr>
+         <th>Legajo</th>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>D.N.I</th>
+         <th></th>
+     </tr>
+
+     @foreach (var alumno in Model)
+     {
+         <tr>
+             <td>@alumno.Legajo</td>
+             <td>@alumno.Nombre</td>
+             <td>@alumno.Apellido</td>
+             <td>@alumno.Dni</td>
+             <td>
+                 @Html.ActionLink("Ver","Detalle",new {leg=alumno.Legajo})  |
+                 @Html.ActionLink("Editar alumno","Editar",new {leg=alumno.Legajo})
+             </td>
+         </tr>
+     }
+
+
+    </table>
+
+</div>

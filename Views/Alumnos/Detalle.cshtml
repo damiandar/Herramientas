@@ -1,0 +1,79 @@
+﻿@model Alumno
+
+@{
+    ViewData["Title"] = "Home Page"; 
+}
+@Html.ActionLink("Volver","Index") 
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src='@Url.Content("~/imagenes/"+ @Model.Legajo + ".jpg")' class="img-rounded img-responsive" style="width:175px; height: 175px;"  />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4>@Model.Nombre @Model.Apellido  </h4>
+                        <small>
+                           <!-- <cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker"></i></cite>-->
+                           @Model.PaisNombre
+                        </small>
+                        <p>
+                           DNI: <b> @Model.Dni</b>  
+                            <br />
+                           Legajo: <b> @Model.Legajo</b>
+                            <br/>
+                            @Model.Sexo
+                            <br />
+                            <!--
+                            <i class="glyphicon glyphicon-globe"></i>
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            <i class="glyphicon glyphicon-gift"></i> 
+                            <a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                            -->
+                        <div class="btn-group">
+                            @Html.ActionLink("Editar Alumno", "Editar", "Alumnos", new {leg=@Model.Legajo}, new { @class = "btn btn-primary btn-large" })
+                            @Html.ActionLink("Borrar Alumno", "Borrar", "Alumnos", new {leg=@Model.Legajo}, new { @class = "btn btn-danger btn-large" })
+                        </div>
+                        <!-- Split button 
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary">
+                                Social</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Social</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Github</a></li>
+                            </ul>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+</div>
+
+@*
+@using (@Html.BeginForm("Borrar","Alumnos"))
+{
+    @Html.LabelFor(m=> m.Legajo)
+    @Html.DisplayFor(m=> m.Legajo)
+    @Html.LabelFor(m=> m.Nombre)
+    @Html.DisplayFor(m=> m.Nombre)
+    @Html.LabelFor(m=> m.Apellido)
+    @Html.DisplayFor(m=> m.Apellido)
+    @Html.LabelFor(m=> m.Dni)
+    @Html.DisplayFor(m=> m.Dni)
+
+<input type="submit" value="Borrar" />
+    
+}
+*@

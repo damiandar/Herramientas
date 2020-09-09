@@ -1,0 +1,25 @@
+﻿@model Socios
+@{
+    ViewData["Title"] = "Gymnasio Olimpia";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Detalle Socios</h1>
+    @Html.ActionLink("Volver","Index")
+    
+@using (@Html.BeginForm("Borrar","Socios"))
+{
+    
+    @Html.LabelFor(m=> m.NroSocio)
+    @Html.DisplayFor(m=> m.NroSocio)    
+    
+    @Html.LabelFor(m=> m.Nombre)
+    @Html.DisplayFor(m=> m.Nombre)
+
+    @Html.LabelFor(m=> m.Apellido)
+    @Html.DisplayFor(m=> m.Apellido)
+
+    <input type="submit" value="Borrar" />
+
+}
+</div>

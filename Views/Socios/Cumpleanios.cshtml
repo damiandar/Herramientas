@@ -1,0 +1,35 @@
+﻿@model List<Socios>
+@{
+    ViewData["Title"] = "Gymnasio Olimpia";
+    var mensaje=ViewBag.mensaje;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cumpleaños Del Mes</h1>
+    <h1>@mensaje</h1>
+    @Html.ActionLink("Volver","Index")
+
+    <table class="table">
+        <tr>
+            <th>Nro. Socio</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cumpleaños</th>
+            <th></th>
+        </tr>
+
+    @foreach (var Socios in Model)
+    {
+        <tr>
+                <td>@Socios.NroSocio</td>
+                <td>@Socios.Nombre</td>
+                <td>@Socios.Apellido</td>
+                <td>@Socios.fecha_nac.ToString("dd/MM/yy")</td>
+                
+                
+        </tr>
+    }
+    </table>
+
+
+</div>

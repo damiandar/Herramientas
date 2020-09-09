@@ -1,0 +1,45 @@
+﻿@model List<Socios>
+@{
+    ViewData["Title"] = "Gymnasio Olimpia";
+    var mensaje=ViewBag.mensaje;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Estado Socios</h1>
+    <h1>@mensaje</h1>
+    @Html.ActionLink("Nuevo Socio ","Nuevo")    
+    @Html.ActionLink(" Ver Atrasados ","Atrasados")    
+    @Html.ActionLink(" Cumpleaños","Cumpleanios")
+
+
+    <table class="table">
+        <tr>
+            <th>Nro. Socio</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha Pago</th>
+            <th>Estado</th>
+            <th>Matricula</th>
+            <th></th>
+        </tr>
+
+    @foreach (var Socios in Model)
+    {
+        <tr>
+                <td>@Socios.NroSocio</td>
+                <td>@Socios.Nombre</td>
+                <td>@Socios.Apellido</td>
+                <td>@Socios.fecha_pago.ToString("dd/MM/yy")</td>
+                <td>@Socios.estado</td>
+                <td>@Socios.Matricula</td>
+                <td>
+                    @Html.ActionLink("Ver","Detalle",new {Nro=Socios.NroSocio}) -
+                    @Html.ActionLink("Editar","Editar",new {Nro=Socios.NroSocio}) -
+                    @Html.ActionLink("Pagos","Pagos",new {Nro=Socios.NroSocio})
+                </td>
+        </tr>
+    }
+    </table>
+
+
+</div>

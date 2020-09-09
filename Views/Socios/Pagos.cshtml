@@ -1,0 +1,24 @@
+﻿@model Socios
+@{
+    ViewData["Title"] = "Gymnasio Olimpia";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ingresar Pagos</h1>
+    @Html.ActionLink("Volver","Index")
+    
+@using (@Html.BeginForm())
+{
+    <div>
+    @Html.LabelFor(m=> m.NroSocio)
+    @Html.EditorFor(m=> m.NroSocio)    
+    </div>
+    <div>
+    @Html.LabelFor(m=> m.Pago)
+    @Html.EditorFor(m=> m.Pago)
+    </div>
+
+        <input type="submit" value="Guardar" />
+
+}
+</div>
