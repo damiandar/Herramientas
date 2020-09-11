@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/ProyClase3.csproj": {}
+    "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/ProyClase3.csproj": {}
   },
   "projects": {
-    "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/ProyClase3.csproj": {
+    "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/ProyClase3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/ProyClase3.csproj",
+        "projectUniqueName": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/ProyClase3.csproj",
         "projectName": "ProyClase3",
-        "projectPath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/ProyClase3.csproj",
+        "projectPath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/ProyClase3.csproj",
         "packagesPath": "/Users/damianrosso/.nuget/packages/",
-        "outputPath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/obj/",
+        "outputPath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

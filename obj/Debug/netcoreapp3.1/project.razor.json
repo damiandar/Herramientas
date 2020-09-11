@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/ProyClase3.csproj",
+  "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/ProyClase3.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,98 +14392,103 @@
   "RootNamespace": "ProyClase3",
   "Documents": [
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Pagos.cshtml",
-      "TargetPath": "Views\\Socios\\Pagos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Atrasados.cshtml",
-      "TargetPath": "Views\\Socios\\Atrasados.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Cumpleanios.cshtml",
-      "TargetPath": "Views\\Socios\\Cumpleanios.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Alumnos/Detalle.cshtml",
-      "TargetPath": "Views\\Alumnos\\Detalle.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Alumnos/Editar.cshtml",
-      "TargetPath": "Views\\Alumnos\\Editar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Alumnos/Index.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Alumnos/Index.cshtml",
       "TargetPath": "Views\\Alumnos\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Detalle.cshtml",
-      "TargetPath": "Views\\Socios\\Detalle.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Alumnos/Crear.cshtml",
-      "TargetPath": "Views\\Alumnos\\Crear.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Nuevo.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Nuevo.cshtml",
       "TargetPath": "Views\\Socios\\Nuevo.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Atrasados.cshtml",
+      "TargetPath": "Views\\Socios\\Atrasados.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Alumnos/Crear.cshtml",
+      "TargetPath": "Views\\Alumnos\\Crear.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Shared/Error.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Alumnos/Order.cshtml",
-      "TargetPath": "Views\\Alumnos\\Order.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Editar.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Alumnos/Editar.cshtml",
+      "TargetPath": "Views\\Alumnos\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Pagos.cshtml",
+      "TargetPath": "Views\\Socios\\Pagos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Editar.cshtml",
       "TargetPath": "Views\\Socios\\Editar.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/Views/Socios/Index.cshtml",
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Home/Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Alumnos/Detalle.cshtml",
+      "TargetPath": "Views\\Alumnos\\Detalle.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Index.cshtml",
       "TargetPath": "Views\\Socios\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Alumnos/Order.cshtml",
+      "TargetPath": "Views\\Alumnos\\Order.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Detalle.cshtml",
+      "TargetPath": "Views\\Socios\\Detalle.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Shared/_PruebaParcial.cshtml",
+      "TargetPath": "Views\\Shared\\_PruebaParcial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/Views/Socios/Cumpleanios.cshtml",
+      "TargetPath": "Views\\Socios\\Cumpleanios.cshtml",
       "FileKind": "mvc"
     }
   ],

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i7Iz6HSWTGAZHMmAcx3y7Dl/g33l+BxLKAHIMDUVEh/+YyMWsHSqoK9QyED2hYuu77oaG/O62cMGRpB0AvCmlQ==",
+  "dgSpecHash": "DEHfg2RDuIfIujlSeZeNzdF+TPgqiTaWoSRQHE6+RvuAb1HDjcs/5YOHGkB4zLVzn/mzwnVwQHSw4rGXtc4Z+w==",
   "success": true,
-  "projectFilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyClase5demo/ProyClase3.csproj",
+  "projectFilePath": "/Users/damianrosso/Desktop/ProyHerramientas/ProyectoClonado/herramientas/ProyClase3.csproj",
   "expectedPackageFiles": [
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.antiforgery/2.2.0/microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
