@@ -84,6 +84,7 @@ namespace ProyClase3.Controllers
 
 
         public IActionResult Editar(int leg){
+
             ViewBag.Paises=Paises;
             var alumnoDB= Lista.Where(s=> s.Legajo==leg).FirstOrDefault();
             return View(alumnoDB);
@@ -91,17 +92,20 @@ namespace ProyClase3.Controllers
 
         [HttpPost]
         public IActionResult Editar(Alumno alumnoFormulario,IFormCollection formulario){
-          
-            var alumnoAnterior= Lista.Where(s => s.Legajo == alumnoFormulario.Legajo).FirstOrDefault();
-            //var paisSeleccionado=Paises.Where(x => x.Id == int.Parse(alumnoFormulario.PaisNombre) ).FirstOrDefault();
-            //alumnoFormulario.PaisNombre=paisSeleccionado.Nombre;
-            //alumnoFormulario.Sexo=formulario["genero"];
+            if(ModelState.IsValid){
+                var alumnoAnterior= Lista.Where(s => s.Legajo == alumnoFormulario.Legajo).FirstOrDefault();
+                //var paisSeleccionado=Paises.Where(x => x.Id == int.Parse(alumnoFormulario.PaisNombre) ).FirstOrDefault();
+                //alumnoFormulario.PaisNombre=paisSeleccionado.Nombre;
+                //alumnoFormulario.Sexo=formulario["genero"];
             
-            Lista.Remove(alumnoAnterior);
-            Lista.Add(alumnoFormulario);
+                Lista.Remove(alumnoAnterior);
+                Lista.Add(alumnoFormulario);
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("Edad", "Debe ingresar la edad en el rango indicado.");
+            ViewBag.Paises=Paises;
+            return View(alumnoFormulario);
             
-            
-            return RedirectToAction("Index");
         }
        
 
