@@ -54,8 +54,30 @@ namespace ProyClase3.Controllers
                 
                 //resultadobusqueda = Lista.Where(s => s.Nombre.Contains(campobusqueda)
                 //|| s.Apellido.Contains(campobusqueda)).ToList<Alumno>();
-                resultadobusqueda = Lista.Where(s => s.Nombre.Contains(campobusqueda)
-                || s.Apellido.Contains(campobusqueda)).ToList<Alumno>();
+                resultadobusqueda = Lista.Where(s => s.Nombre.ToUpper().Contains(campobusqueda.ToUpper())
+                || s.Apellido.ToUpper().Contains(campobusqueda.ToUpper())).ToList<Alumno>();
+                return View(Paginar(resultadobusqueda,pagina));
+            } 
+            //Lista.Reverse();
+            //return View(resultadobusqueda);
+
+            return View(Paginar(resultadobusqueda,pagina));
+            
+        }
+
+        public IActionResult Muestra(string campobusqueda,int? pagina)
+        {
+            //consulto BD
+
+            var resultadobusqueda=Lista;
+            ViewBag.MensajeBienvenida="Estamos probando el viewbag";      
+            if (!String.IsNullOrEmpty(campobusqueda))
+            {
+                
+                //resultadobusqueda = Lista.Where(s => s.Nombre.Contains(campobusqueda)
+                //|| s.Apellido.Contains(campobusqueda)).ToList<Alumno>();
+                resultadobusqueda = Lista.Where(s => s.Nombre.ToUpper().Contains(campobusqueda.ToUpper())
+                || s.Apellido.ToUpper().Contains(campobusqueda.ToUpper())).ToList<Alumno>();
                 return View(Paginar(resultadobusqueda,pagina));
             } 
             //Lista.Reverse();
@@ -66,7 +88,7 @@ namespace ProyClase3.Controllers
         }
 
         public IPagedList Paginar(List<Alumno> lista,int? pagina){
-            int pageSize = 5;
+            int pageSize = 6;
             int pageNumber = (pagina ?? 1);
             return lista.ToPagedList(pageNumber,pageSize);
         }

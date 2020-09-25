@@ -6,7 +6,7 @@
 @using X.PagedList.Mvc;
 @using X.PagedList.Mvc.Core;
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Muestra de tarjetas";
     var @mensaje= ViewBag.MensajeBienvenida;
 }
 @functions{
@@ -31,37 +31,33 @@ string MostrarBanderaPais(string pais)
     @Html.ActionLink("Crear alumno","Crear")  |   
     @Html.ActionLink("Order : Asc - Desc","Order")
     
-    <table class="table">
-     <tr>
-         <th></th>
-         <th>Legajo</th>
-         <th>Nombre</th>
-         <th>Apellido</th>
-         <th>D.N.I</th>
-         <th>Pais</th>
-         <th>Sexo</th>
-         <th></th>
-     </tr>
+<div class="row">
 
      @foreach (var alumno in Model)
      {
-         <tr>
-             <td><img src='@Url.Content("~/imagenes/"+ @alumno.Legajo + ".jpg")' class="rounded-circle"  style="width: 75px; height: 75px;" />  </td>
-             <td>@alumno.Legajo</td>
-             <td>@alumno.Nombre</td>
-             <td>@alumno.Apellido</td>
-             <td>@alumno.Dni</td>
-             <td>@MostrarBanderaPais(@alumno.PaisNombre)</td>
-             <td>@alumno.Sexo</td>
-             <td><i class="glyphicon glyphicon-globe"></i>
-                 @Html.ActionLink("Ver","Detalle",new {leg=alumno.Legajo})  |
-                 @Html.ActionLink("Editar alumno","Editar",new {leg=alumno.Legajo})
-             </td>
-         </tr>
+         <div class="col">
+         <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src='@Url.Content("~/imagenes/"+ @alumno.Legajo + ".jpg")' alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h5 class="card-title">@alumno.Nombre @alumno.Apellido</h5>
+    <h6 class="card-subtitle mb-2 text-muted">@alumno.Legajo</h6>
+    <p class="card-text">
+             @alumno.Dni
+             @MostrarBanderaPais(@alumno.PaisNombre)
+             @alumno.Sexo
+    </p>
+     @Html.ActionLink("Ver","Detalle",new {leg=alumno.Legajo})  |
+    @Html.ActionLink("Editar alumno","Editar",new {leg=alumno.Legajo})
+  </div>
+  </div>
+</div>
+
+        
+
      }
-
-
-    </table>
+</div>
+ 
 Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
 
 @Html.PagedListPager(Model, pagina => Url.Action("Index",
