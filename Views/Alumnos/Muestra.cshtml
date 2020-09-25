@@ -47,7 +47,7 @@ string MostrarBanderaPais(string pais)
              @MostrarBanderaPais(@alumno.PaisNombre)
              @alumno.Sexo
     </p>
-     @Html.ActionLink("Ver","Detalle",new {leg=alumno.Legajo})  |
+     @Html.ActionLink("Ver","Detalle",new {leg=alumno.Legajo},new { @class = "btn btn-primary btn-large",data_toggle="modal", data_target="#pantallaModal" })  |
     @Html.ActionLink("Editar alumno","Editar",new {leg=alumno.Legajo})
   </div>
   </div>
@@ -60,7 +60,7 @@ string MostrarBanderaPais(string pais)
  
 Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
 
-@Html.PagedListPager(Model, pagina => Url.Action("Index",
+@Html.PagedListPager(Model, pagina => Url.Action("Muestra",
     new { pagina, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }),
     new X.PagedList.Mvc.Core.Common.PagedListRenderOptions {
         
@@ -70,4 +70,27 @@ Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.P
        
     })
 
+</div>
+
+
+<div class="modal fade" id="pantallaModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>  
+                @await Html.PartialAsync("_VistaParcial")
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
