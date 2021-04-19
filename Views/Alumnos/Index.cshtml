@@ -34,6 +34,7 @@ string MostrarBanderaPais(string pais)
     <table class="table">
      <tr>
          <th></th>
+         <th>Foto ruta</th>
          <th>Legajo</th>
          <th>Nombre</th>
          <th>Apellido</th>
@@ -47,6 +48,7 @@ string MostrarBanderaPais(string pais)
      {
          <tr>
              <td><img src='@Url.Content("~/imagenes/"+ @alumno.Legajo + ".jpg")' class="rounded-circle"  style="width: 75px; height: 75px;" />  </td>
+             <td>@alumno.FotoRuta</td>
              <td>@alumno.Legajo</td>
              <td>@alumno.Nombre</td>
              <td>@alumno.Apellido</td>

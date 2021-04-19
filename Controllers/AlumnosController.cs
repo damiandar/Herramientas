@@ -10,10 +10,19 @@ using ProyClase3.Models;
 using X.PagedList.Mvc.Core;
 using X.PagedList;
 
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+
 namespace ProyClase3.Controllers
 {
     public class AlumnosController : Controller
     {
+
+               private readonly IWebHostEnvironment _hostingEnvironment;
+
+        public AlumnosController(IWebHostEnvironment hostingEnviroment){
+            _hostingEnvironment=hostingEnviroment;
+        }
 
         static List<Alumno> Lista= new List<Alumno>()
         {
@@ -133,12 +142,30 @@ namespace ProyClase3.Controllers
 
         public IActionResult Crear()
         {
-
+            ViewBag.Paises=Paises;
             return View();
         }
 
-        
+        public IActionResult CrearVM()
+        {
 
+            return View(new AlumnoVM());
+        }
+        [HttpPost]
+        public IActionResult CrearVM(AlumnoVM alumnoFormulario){
+            var alumno=alumnoFormulario.Alumno;
+            if(alumno.Foto!=null){
+                string carpetaFotos=Path.Combine(_hostingEnvironment.WebRootPath,"imagenes");
+                string nombreArchivo=alumno.Foto.FileName;
+                string rutaCompleta=Path.Combine(carpetaFotos,nombreArchivo);
+                //subimos la imagen al servidor
+                alumno.Foto.CopyTo(new FileStream(rutaCompleta,FileMode.Create));
+                //guardar la ruta de la imagen en la base de datos
+                alumno.FotoRuta=nombreArchivo;
+            }
+            Lista.Add(alumnoFormulario.Alumno);
+            return RedirectToAction("Index");
+        }
 
         /*
         [HttpPost]
